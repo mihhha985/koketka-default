@@ -48,8 +48,12 @@ async function View({ params }: { params: { uuid: string } }) {
 					<h4 className="text-xl font-semibold uppercase">получить контакты</h4>
 					<h5 className="italic">Для того что-бы получить контакты девушеки напишите нашему менеджеру</h5>
 					<div className="flex gap-x-5">
-						<FaWhatsapp  size={44}/>
-						<FaTelegramPlane size={44}/>
+						<a href="https://wa.me/79054462485" target="__blank">
+							<FaWhatsapp  size={44}/>
+						</a>
+						<a href="https://t.me/pandoramodels" target="__blank">
+							<FaTelegramPlane size={44}/>
+						</a>
 					</div>
 				</div>
 				<div className="grid grid-cols-3 gap-2 col-span-2">
