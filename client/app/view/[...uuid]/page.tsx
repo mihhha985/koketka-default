@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Gallery from "@/component/Gallery";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FaTelegramPlane } from "react-icons/fa";
 
@@ -16,24 +16,8 @@ const GetModelByUuid = async (uuid: string) => {
 	}	
 }
 
-const GetAlbumById = async (id: string) => {	
-	try{
-		const res = await fetch(`${process.env.serverUrl}/models/gallery/${id}`);
-		if(res.status === 200){
-			const data = await res.json();
-			return data;
-		}else{
-			return null;
-		}
-	}catch(e: any){
-		throw new Error(e.message);
-	}	
-}
-
 async function View({ params }: { params: { uuid: string } }) {
   const user = await GetModelByUuid(params.uuid);
-	const album = await GetAlbumById(user.id);
-	console.log(album);
 
   if(user){
 		return ( 
@@ -56,25 +40,7 @@ async function View({ params }: { params: { uuid: string } }) {
 						</a>
 					</div>
 				</div>
-				<div className="grid grid-cols-3 gap-2 col-span-2">
-					{album && album.foto?.map((item:any, index:number) => 
-						<a
-							key={index} 
-							target="__blank" 
-							href={`${process.env.serverUrl}/${user.id}/foto/${item}`}
-							className="relative h-[400px] w-[400px]"
-							>
-							<Image 
-								src={`${process.env.serverUrl}/${user.id}/foto/${item}`} 
-								priority={index === 0 ? true : false }
-								sizes="100%"
-								fill
-								alt="foto"
-								className="object-contain" 
-							/>
-						</a>
-					)}
-				</div>
+				<Gallery id={Number(user.id)}/>
 			</div>
 		);
 	}else{

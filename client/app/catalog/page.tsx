@@ -11,7 +11,7 @@ const getModels = async () => {
 
 async function Page() {
 	const user = await getModels();
-	console.log(user);
+	
 	return ( 
 		<div className="flex flex-col gap-y-10">
 			<div className="flex flex-col">
