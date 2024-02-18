@@ -8,11 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      backgroundColor:{
+				default: "#f8f5f1",
+				secondary: "#f0ece8",
+				accent: "#6951b2",
+			},
+			textColor:{
+				primary: "#7b736c",
+				secondary: "#1e1e1e",
+				accent: "#6951b2"
+			},
+			fontFamily:{
+				main: ["var(--font-garamond)", "serif"],
+				link: ["var(--font-comfortaa)", "serif"],
+				logo: ["var(--font-logo)", "sans-serif"]
+			},
     },
   },
   plugins: [],

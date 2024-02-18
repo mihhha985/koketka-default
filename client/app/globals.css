@@ -3,11 +3,32 @@
 @tailwind utilities;
 
 body{
-	@apply bg-gray-100 text-slate-800 min-w-[1290px];
+	@apply bg-default text-primary min-w-[380px] font-main;
+}
+
+.section{
+	@apply relative px-[2%] sm:px-0;
+
 }
 
 .layout{
-	@apply flex flex-col min-h-screen w-[1280px] mx-auto gap-y-10;
+	@apply flex flex-col min-h-screen w-[1280px] mx-auto gap-y-10 relative z-10;
+}
+
+.logo{
+	@apply font-logo font-bold text-accent;
+}
+
+.menu-link{
+	@apply opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-100;
+}
+
+.title{
+	@apply font-bold text-3xl lg:text-5xl uppercase;
+}
+
+.headline{
+	@apply text-2xl lg:text-3xl italic;
 }
 
 .input-box{
