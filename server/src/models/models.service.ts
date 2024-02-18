@@ -19,8 +19,8 @@ export class ModelsService {
 				order: {
 					rating:"DESC"
 				},
-				take: 9,
-				skip: offset,
+				take: 12,
+				skip: offset * 12,
 				relations: ['description'],
 			});
 		}catch(err) {

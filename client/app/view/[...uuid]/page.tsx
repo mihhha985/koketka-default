@@ -1,6 +1,6 @@
-import Gallery from "@/component/Gallery";
-import { FaWhatsapp } from "react-icons/fa6";
-import { FaTelegramPlane } from "react-icons/fa";
+import Title from "@/component/Title";
+import ViewGallery from "@/component/ViewGallery";
+import ViewDescription from "@/component/ViewDesctiption";
 
 const GetModelByUuid = async (uuid: string) => {
 	try{
@@ -20,28 +20,16 @@ async function View({ params }: { params: { uuid: string } }) {
   const user = await GetModelByUuid(params.uuid);
 
   if(user){
-		return ( 
-			<div className="grid grid-cols-2 gap-5">
-				<div className="flex flex-col gap-y-5">
-					<h3 className="text-2xl font-semibold">
-						{user.firstName}, {user.description.age} года
-					</h3>
-					<p>{user.about}</p>
-				</div>
-				<div className="flex flex-col px-20 py-10  gap-y-5 border-2 border-slate-300 rounded-lg">
-					<h4 className="text-xl font-semibold uppercase">получить контакты</h4>
-					<h5 className="italic">Для того что-бы получить контакты девушеки напишите нашему менеджеру</h5>
-					<div className="flex gap-x-5">
-						<a href="https://wa.me/79054462485" target="__blank">
-							<FaWhatsapp  size={44}/>
-						</a>
-						<a href="https://t.me/pandoramodels" target="__blank">
-							<FaTelegramPlane size={44}/>
-						</a>
+		return (
+			<section className="section py-40 min-h-screen"> 
+				<div className="container mx-auto flex flex-col gap-y-10 items-center">
+					<Title title={user.firstName} subtitle='Эскорт модель'/>
+					<div className="grid grid-cols-1 lg:grid-cols-2 w-full">
+						<ViewGallery id={user.id}/>
+					 <ViewDescription user={user}/>
 					</div>
 				</div>
-				<Gallery id={Number(user.id)}/>
-			</div>
+			</section>
 		);
 	}else{
 		return(
