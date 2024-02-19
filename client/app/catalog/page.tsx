@@ -1,7 +1,6 @@
 import CatalogItem from '@/component/CatalogItem';
 import Title from '@/component/Title';
 import {Contact} from '@/types/models';
-import LoadMore from '@/component/LoadMore';
 import Link from 'next/link';
 
 const getModels = async () => {
@@ -21,7 +20,7 @@ async function Page() {
 			<div className='container mx-auto flex flex-col gap-y-10 items-center'>
 				<Title title="Каталог" subtitle='Анкеты наших моделей'/>
 				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 w-full">
-					{user.map((model: Contact, index:number) => 
+					{user.map((model: Contact) => 
 						<Link href={`/view/${model.uuid}`} key={model.id}>
 							<CatalogItem 
 								key={model.id}

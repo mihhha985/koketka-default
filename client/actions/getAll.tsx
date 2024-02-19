@@ -13,7 +13,6 @@ export const fetchAnimate = async (page: number):Promise<JSX.Element> => {
 			name={model.firstName}
 			age={model.description?.age}
 			rating={model.rating}
-			index={index}
 		/>
 	);
 };
