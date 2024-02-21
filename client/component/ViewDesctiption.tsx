@@ -6,7 +6,7 @@ function ViewDescript({user}: {user: Contact}) {
   
   return ( 
     <>
-    <div className="flex flex-col pb-10">
+    <div className="flex flex-col pl-10 pb-10">
         <div className="text-primary border-b border-primary pb-2 relative">
           <div className="text-2xl sm:text-4xl font-semibold">Имя: {user.firstName}</div>
           <div className="text-xl sm:text-2xl italic">Возраст: {user.description.age} лет</div>
@@ -42,7 +42,7 @@ function ViewDescript({user}: {user: Contact}) {
             <p className="text-secondary-200">{user.about}</p>
           </div>
         </div>
-        <div className="flex flex-col gap-2 w-full mt-auto whitespace-nowrap">
+        <div className="flex flex-col gap-2 w-full mt-auto">
 					<h4 className="text-4xl">ПОЛУЧИТЬ КОНТАКТЫ</h4>
 					<p className="text-2xl italic">Для того что-бы получить контакты девушеки напишите нашему менеджеру</p>
 					<div className="flex gap-x-5">

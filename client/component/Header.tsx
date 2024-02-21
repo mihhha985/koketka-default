@@ -26,7 +26,7 @@ function Index() {
 					<Image src="/logo.png" alt="logo" width={100} height={100} />
 					<div>
 						<h1 className="text-4xl sm:text-5xl logo">{process.env.name}</h1>
-						<h2 className="text-xl sm:text-2xl font-logo tracking-wide text-accent/80">Premium escort service</h2>
+						<h2 className="text-base sm:text-xl font-logo tracking-wide text-accent/80">Premium escort service</h2>
 					</div>
 				</Link>
 				<nav className="hidden lg:flex items-center gap-x-5 font-semibold text-accent text-xl font-link">
