@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Comfortaa, Permanent_Marker } from "next/font/google";
+import { Suspense } from "react";
+import {Metrika} from "@/component/Metrika";
+import { 
+	Cormorant_Garamond, 
+	Comfortaa, 
+	Permanent_Marker 
+} from "next/font/google";
 import "./globals.css";
 
 const logo = Permanent_Marker({ 
@@ -33,12 +39,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+	
   return (
     <html lang="en">
 			<head>
-				<link rel="icon" href="/favicon.png"  type="image/png"/>			
+				<link rel="icon" href="/favicon.png"  type="image/png"/>	
+				<link rel="preconnect" href="htts://mc.yandex.ru"/>
 			</head>
-      <body className={`${main.variable} ${link.variable}`}>
+      <body className={`${main.variable} ${link.variable} ${logo.variable}`}>
+				<Suspense>
+					<Metrika />
+				</Suspense>
 				{children}
 			</body>
     </html>
