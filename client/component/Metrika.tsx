@@ -4,7 +4,8 @@ import Script from "next/script";
 export function Metrika() {
 
   return (
-    <Script id="yandex-metrika">
+		<>
+			<Script id="yandex-metrika">
       {`
         (function(m,e,t,r,i,k,a){m[i]=m[i]function(){(m[i].a=m[i].a[]).push(arguments)};
 				m[i].l=1*new Date();
@@ -19,6 +20,7 @@ export function Metrika() {
 					webvisor:true
 				});
       `}
-    </Script>
+    	</Script>
+		</>
   );
 }

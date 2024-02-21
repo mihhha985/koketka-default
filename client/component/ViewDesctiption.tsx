@@ -5,9 +5,9 @@ import { Contact } from "@/types/models";
 function ViewDescript({user}: {user: Contact}) {
   
   return ( 
-    <>
     <div className="flex flex-col pl-10 pb-10">
-        <div className="text-primary border-b border-primary pb-2 relative">
+
+      <div className="text-primary border-b border-primary pb-2 relative">
           <div className="text-2xl sm:text-4xl font-semibold">Имя: {user.firstName}</div>
           <div className="text-xl sm:text-2xl italic">Возраст: {user.description.age} лет</div>
           <div className="absolute top-5 right-4 cursor-pointer flex gap-5">
@@ -21,8 +21,9 @@ function ViewDescript({user}: {user: Contact}) {
               <FaRegHeart size={32} className="opacity-75 hover:opacity-100 transition-opacity"/>
             </div>
           </div>
-        </div>
-        <div className="border-b border-primary pb-2">
+      </div>
+
+      <div className="border-b border-primary pb-2">
           <h4 className={'text-xl sm:text-2xl font-semibold'}>Параметры:</h4>
           <div className="grid grid-cols-2 gap-2 text-xl">
             <div className={''}>Рост: {user.description.height} см</div>
@@ -35,14 +36,16 @@ function ViewDescript({user}: {user: Contact}) {
               <span>---</span>  
             </div>
           </div>
-        </div>
-        <div className="mt-2 sm:mt-5">
+      </div>
+
+      <div className="mt-2 sm:mt-5">
           <h4 className={'text-xl sm:text-2xl font-semibold'}>О себе:</h4>
           <div className="text-lg sm:text-xl bg-primary rounded-md p-2 w-full xl:w-3/4 mb-5">
             <p className="text-secondary-200">{user.about}</p>
           </div>
-        </div>
-        <div className="flex flex-col gap-2 w-full mt-auto">
+      </div>
+
+      <div className="flex flex-col gap-2 w-full mt-auto">
 					<h4 className="text-4xl">ПОЛУЧИТЬ КОНТАКТЫ</h4>
 					<p className="text-2xl italic">Для того что-бы получить контакты девушеки напишите нашему менеджеру</p>
 					<div className="flex gap-x-5">
@@ -53,9 +56,8 @@ function ViewDescript({user}: {user: Contact}) {
 							<FaTelegram size={48} />
 						</a>
 					</div>
-				</div>
-      </div>
-    </> 
+			</div>
+    </div>
   );
 }
 
