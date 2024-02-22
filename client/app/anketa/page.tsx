@@ -11,7 +11,9 @@ function Page() {
 
 	return ( 
 		<>
-		<section className="section min-h-screen py-40">
+		<section className="section min-h-screen bg-secondary py-20
+		before:absolute before:w-full before:-bottom-10 before:left-0 before:h-[100px] sm:before:h-[140px] 
+		before:bg-[url('/border.png')] before:bg-top before:z-10">
 			<div className="container mx-auto flex flex-col items-center gap-y-10">
 			<Title title="Добавить анкету" subtitle='Заполните форму и мы свяжемся с вами'/>
 			<form

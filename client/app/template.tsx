@@ -3,19 +3,21 @@ import Header from "@/component/Header";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   return (
-		<div className="relative overflow-hidden">
+		<>
 			<Header />
 			{children}
-			<footer className="text-center pb-5 mt-20">
+			<footer className="relative overflow-hidden h-[200px] sm:h-[300px] flex flex-col items-center justify-end text-center pb-5">
 				<p>© 2021-2024 Butterfly. Все права защещины.</p>
+				<div className='w-[300px] h-[300px] md:w-[400px] md:h-[400px] absolute -left-28 -bottom-28 z-10'>
+					<Image 
+						className="opacity-80 mix-blend-luminosity"
+						src={'/fon1.png'} 
+						alt={''} 
+						sizes="100%"
+						fill
+					/>
+				</div>
 			</footer>
-			<Image 
-				src={'/fon1.png'} 
-				alt={''} 
-				width={600} 
-				height={600} 
-				className='absolute -left-48 -bottom-48 sm:-left-40 sm:-bottom-40 z-10 opacity-80 mix-blend-luminosity'
-			/>
-		</div>
+		</>
 	);
 }

@@ -3,7 +3,7 @@ import Title from './Title';
 
 function Advantages() {
 	return ( 
-		<section className="section relative bottom-5 z-20">
+		<section className="section bottom-5 z-20">
 			<div className="container mx-auto">
 				<div className="w-full lg:w-1/2">
 					<div className="flex flex-col gap-y-2 w-min">

@@ -17,8 +17,6 @@ function Index({id, name, age, uuid, rating}: ItemProps) {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			whileTap={{ scale: 0.9 }}
-			viewport={{once: true}}
-			transition={{ duration: 1, ease: "easeOut" }}
 			className="relative cursor-pointer overflow-hidden rounded-lg shadow-xl shadow-black/10 h-[400px]
 			group hover:shadow-none transition-all duration-200 ease-in-out">
 				<Image 

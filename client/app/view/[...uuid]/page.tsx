@@ -1,6 +1,8 @@
 import Title from "@/component/Title";
 import ViewGallery from "@/component/ViewGallery";
 import ViewDescription from "@/component/ViewDesctiption";
+import PaymentModal from "@/component/Modal/PaymentModal";
+import AlertModal from "@/component/Modal/AlertModal";
 
 const GetModelByUuid = async (uuid: string) => {
 	try{
@@ -21,14 +23,16 @@ async function View({ params }: { params: { uuid: string } }) {
 
   if(user){
 		return (
-			<section className="section py-40 min-h-screen"> 
+			<section className="section pt-40 min-h-screen"> 
 				<div className="container mx-auto flex flex-col gap-10 items-center">
 					<Title title={user.firstName} subtitle='Эскорт модель'/>
-					<div className="grid grid-cols-1 lg:grid-cols-2 w-full">
-						<ViewGallery id={user.id}/>
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full">
+						<ViewGallery id={user.description.id}/>
 					 <ViewDescription user={user}/>
 					</div>
 				</div>
+				<PaymentModal name={user.firstName} age={user.description.age}/>
+				<AlertModal />
 			</section>
 		);
 	}else{

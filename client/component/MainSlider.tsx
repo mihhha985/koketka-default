@@ -22,7 +22,7 @@ export default () => {
 		.catch(err => console.log(err));
 	}, []);
   return (
-		<section className="flex flex-col items-center gap-y-10 pt-24 px-10">
+		<section className="section flex flex-col items-center gap-y-10 pt-24">
 			<Title title="Наши Модели" subtitle="Топ 50 лучших анкет сайта" />
 			<Swiper
 				modules={[Scrollbar, Autoplay]}
@@ -59,7 +59,7 @@ export default () => {
 				{data.length > 0 && data.map((model: any) => 
 					<SwiperSlide key={model.id} className='relative'>
 						<Image 
-							src={`${process.env.serverUrl}/${model.id}/ava.jpg`}
+							src={`${process.env.serverUrl}/${model.description.id}/ava.jpg`}
 							alt={model.firstName}
 							width={300}
 							height={300}

@@ -5,52 +5,41 @@ import CatalogItem from '@/component/CatalogItem';
 import {Contact} from '@/types/models';
 import Link from 'next/link';
 import { useInView } from "framer-motion";
-import { set } from 'react-hook-form';
 
 let page = 0;
 
 function CatalogList() {
 	const [models, setModels] = useState<Contact[] | []>([]);
 	const ref = useRef(null)
-  const isInView = useInView(ref);
-
-	useEffect(() => {
-		console.log("fetching");
-
-		return () => {
-			setModels([]);
-			page = 0;
-		}
-	}, []);
-
+  const isInView = useInView(ref)
+	
 	useEffect(() => {
 		if(isInView){
 			let offsetY = window.pageYOffset;
+			console.log('offsetY: ' + offsetY);
 			setTimeout(() => {
-			fetch(`${process.env.serverUrl}/models?offset=${page}`)
+				fetch(`${process.env.serverUrl}/models?offset=${page}`)
 				.then(res => res.json())
 				.then(res => {
 					const newModelsPage = models.concat(res);
 					setModels(newModelsPage);
+					console.log(newModelsPage);
+					window.scrollTo(0, offsetY -100);
 					page++;
 				});
-			}, 500);
-
-			setTimeout(() =>  {
-				window.scrollTo(0, offsetY - 100)
-			}, 600);
+			}, 1000);
 		}
 	}, [isInView]);
 	
 	return ( 
-		<div className='flex flex-col gap-y-10 items-center w-full'>
-			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 w-full">
+		<div className='container mx-auto flex flex-col gap-y-10 items-center min-h-screen'>
+			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 w-full">
 				{models.length > 0 && models.map((model: Contact) => 
 					<Link href={`/view/${model.uuid}`} key={model.id}>
 						<CatalogItem 
 							key={model.id}
 							uuid={model.uuid}
-							id={model.description.id}
+							id={model.id}
 							name={model.firstName}
 							age={model.description.age}
 							rating={model.rating}
@@ -58,7 +47,7 @@ function CatalogList() {
 					</Link>
 				)}
 			</div>
-			<div className="relative flex justify-center items-center w-full mt-20 z-50" ref={ref}>
+			<div className="flex justify-center items-center w-full mt-20" ref={ref}>
 				<ImSpinner9 className="animate-spin text-5xl text-accent" />
       </div>
 		</div>
