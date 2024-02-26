@@ -41,7 +41,7 @@ function PaymentModal({name, age}: {name: string, age: number}) {
             <span className="font-semibold ml-2">{name} - {age} года</span>
           </h4>
           <div className="flex h-full w-full">
-						<iframe src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=112J7BSBLSE.240224&" width="330" height="50" frameBorder="0" allowtransparency="true" scrolling="no"></iframe>​
+						<iframe src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=112J7BSBLSE.240224&" width="330" height="50" frameBorder="0" allowTransparency={true} scrolling="no"></iframe>​
 					</div>
         </motion.div>
       </div>
