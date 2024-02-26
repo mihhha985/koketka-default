@@ -7,15 +7,16 @@ import QuestionItem from "@/component/QuestionItem";
 
 export default function Home() {
   return (
-		<>
-		<main className="relative mt-[90px] h-[400px] sm:h-[600px] lg:h-[800px] before:absolute before:w-full before:-bottom-[1px] before:left-0 before:h-[200px]
-			before:bg-[url('/border.png')] before:z-10">
+		<div className="overflow-hidden">
+		<main className="relative h-[400px] sm:h-[600px] lg:h-[800px] 
+			before:absolute before:w-full before:-bottom-1 before:left-0 before:h-[100px] sm:before:h-[180px]
+			before:bg-[url('/border.png')] before:bg-top before:z-10">
 			<Image src="/header.png" alt="эскортницы на ваш выбор" className="object-cover" sizes="100%" fill/>
 		</main>
 		<Advantages />
 		<Services />
 		<MainSlider />
-		<section className="relative my-24">
+		<section className="relative mt-24">
 			<div className="container mx-auto flex flex-col items-center gap-y-10">
 				<Title title="FAQ" subtitle="Часто задаваемые вопросы" />
 				<div className="pl-[15%] sm:pl-[25%] flex flex-col gap-y-5">
@@ -45,6 +46,6 @@ export default function Home() {
 				</div>
 			</div>
 		</section>
-		</>
+		</div>
   );
 }

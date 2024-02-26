@@ -17,8 +17,8 @@ function Index() {
 
 	return ( 
 		<>
-		<header className="absolute top-0 left-0 w-full h-[90px] z-50 before:absolute before:w-full before:-top-[20px] before:left-0 before:h-[200px]
-			before:bg-[url('/header-border.png')] before:-z-10">
+		<header className="relative h-[90px] z-50 before:absolute before:w-full before:-top-[20px] before:-left-0 before:h-[200px]
+			before:bg-[url('/header-border.png')] before:bg-left-bottom before:-z-10">
 			<div className="container flex items-center mx-auto">
 				<Link
 					href="/" 

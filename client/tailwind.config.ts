@@ -12,10 +12,12 @@ const config: Config = {
 				default: "#f8f5f1",
 				secondary: "#f0ece8",
 				accent: "#6951b2",
+				dark:"#7b736c",
 			},
 			textColor:{
+				default: "#f8f5f1",
 				primary: "#7b736c",
-				secondary: "#1e1e1e",
+				secondary: "#f0ece8",
 				accent: "#6951b2"
 			},
 			fontFamily:{

@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
+import Providers from "@/component/Provider";
 import Script from "next/script";
+
 import { 
 	Cormorant_Garamond, 
 	Comfortaa, 
 	Permanent_Marker 
 } from "next/font/google";
-import "./globals.css";
+
+import "@/styles/globals.scss";
 
 const logo = Permanent_Marker({ 
 	subsets: ["latin"],
@@ -60,7 +63,9 @@ export default function RootLayout({
 					});
 				`}    
         </Script>
-				{children}
+				<Providers>
+					{children}
+				</Providers>
 			</body>
     </html>
   );

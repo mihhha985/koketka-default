@@ -16,7 +16,7 @@ const DefaultButton = forwardRef((
 )  => {
   return ( 
     <motion.button
-			className={'font-link text-base bg-accent text-white p-2 rounded-md opacity-80 hover:opacity-100 transition-opacity duration-200'}
+			className={className}
       onClick={onClick}
       disabled={disabled}
       whileTap={{scale:0.9}}
