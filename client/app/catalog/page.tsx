@@ -5,7 +5,6 @@ import CatalogItem from '@/component/CatalogItem';
 import {Contact} from '@/types/models';
 import Link from 'next/link';
 import { useInView } from "framer-motion";
-import { set } from 'react-hook-form';
 
 let page = 0;
 

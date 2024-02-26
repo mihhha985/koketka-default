@@ -149,20 +149,6 @@ function ViewDescript({user}: {user: Contact}) {
             <p className="text-secondary-200">{user.about}</p>
           </div>
       </div>
-			{/*
-      <div className="flex flex-col gap-2 w-full mt-auto">
-					<h4 className="text-4xl">ПОЛУЧИТЬ КОНТАКТЫ</h4>
-					<p className="text-2xl italic">Для того что-бы получить контакты девушеки напишите нашему менеджеру</p>
-					<div className="flex gap-x-5">
-						<a href="https://wa.me/79054462485" target="__blank">
-							<FaWhatsapp size={48} />
-						</a>
-						<a href="https://t.me/pandoramodels" target="__blank">
-							<FaTelegram size={48} />
-						</a>
-					</div>
-			</div>
-			*/}
 			<div className="flex flex-col xl:flex-row gap-2 w-full mt-20 whitespace-nowrap">
         <DefaultButton
 					className="btn"
