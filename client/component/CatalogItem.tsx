@@ -1,22 +1,23 @@
 "use client"
 import Image from "next/image";
-import Link from "next/link";
 import RatingStars from "./RatingStar";
-import { MotionDiv } from "./MotionDiv";
+import {motion} from "framer-motion";
 
-type ItemProps = {id: number, name: string, age: number, uuid: string, rating: number, offset?:string};
+type ItemProps = {id: number, name: string, age: number, rating: number, offset?:string};
 
 const variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
 };
 
-function Index({id, name, age, uuid, rating}: ItemProps) {
+function Index({id, name, age, rating}: ItemProps) {
 	return ( 
-		<MotionDiv
-			initial={{ opacity: 0 }}
-			whileInView={{ opacity: 1 }}
+		<motion.div
+			initial={{ opacity: 0}}
+			whileInView={{ opacity: 1}}
 			whileTap={{ scale: 0.9 }}
+			viewport={{once:true}}
+			transition={{duration:0.8, ease:"linear"}}
 			className="relative cursor-pointer overflow-hidden rounded-lg shadow-xl shadow-black/10 h-[400px]
 			group hover:shadow-none transition-all duration-200 ease-in-out">
 				<Image 
@@ -36,7 +37,7 @@ function Index({id, name, age, uuid, rating}: ItemProps) {
           	<RatingStars rating={rating} />
         	</div>
 				</div>
-		</MotionDiv>
+		</motion.div>
 	);
 }
 
