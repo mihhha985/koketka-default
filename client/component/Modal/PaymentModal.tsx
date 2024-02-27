@@ -41,7 +41,23 @@ function PaymentModal({name, age}: {name: string, age: number}) {
             <span className="font-semibold ml-2">{name} - {age} года</span>
           </h4>
           <div className="flex h-full w-full">
-						<iframe src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=112J7BSBLSE.240224&" width="330" height="50" frameBorder="0" allowTransparency={true} scrolling="no"></iframe>​
+						<form method="POST" target="_blank" action="https://yoomoney.ru/quickpay/confirm">
+							<input type="hidden" name="billNumber" value="112J7BSBLSE.240224" />
+							<input type="hidden" name="targets" value="Чаевые за уборку" />
+							<input type="hidden" name="backgroundId" value="105"/>
+							<input type="hidden" name="buttonText" value="transfer"/>
+							<input type="hidden" name="buttonSize" value="L"/>
+							<input type="hidden" name="receiver" value="4100118562053775"/>
+							<input type="hidden" name="sum" value="2800"/>
+							<input type="hidden" name="referer" value="http://clining-lime.site"/>
+							<input type="hidden" name="quickpay-form" value="button"/>
+							<input type="hidden" name="is-inner-form" value="true"/>
+							<div className="mui-1lkn5mm">
+								<button className="btn text-nowrap" tabIndex={0} type="submit">
+									Перевести <b>2800 &#8381;</b>
+								</button>
+							</div>
+						</form>
 					</div>
         </motion.div>
       </div>
