@@ -38,7 +38,6 @@ function CatalogList() {
 					<Link href={`/view/${model.uuid}`} key={model.id}>
 						<CatalogItem 
 							key={model.id}
-							uuid={model.uuid}
 							id={model.id}
 							name={model.firstName}
 							age={model.description.age}
