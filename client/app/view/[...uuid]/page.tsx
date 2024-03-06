@@ -23,8 +23,8 @@ async function View({ params }: { params: { uuid: string } }) {
 
   if(user){
 		return (
-			<section className="section bg-secondary py-40 min-h-screen before:absolute before:w-full before:-bottom-10 before:left-0 before:bg-[url('/border.png')] 
-			before:h-[100px] sm:before:h-[160px] bg-top before:z-10"> 
+			<section className="section bg-secondary pt-20 pb-40 min-h-screen before:absolute before:w-full 
+			before:-bottom-1 before:left-0 before:bg-[url('/border.png')] before:h-[100px] sm:before:h-[160px] before:bg-top before:z-10"> 
 				<div className="container mx-auto flex flex-col gap-10 items-center">
 					<Title title={user.firstName} subtitle='Эскорт модель'/>
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full">

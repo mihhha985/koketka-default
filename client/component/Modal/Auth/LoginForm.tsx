@@ -36,7 +36,7 @@ const LoginForm = motion(forwardRef((props, ref:ForwardedRef<HTMLFormElement>) =
 				ref={ref}
 				onSubmit={handleSubmit(onSubmit)}
 				onClick={(e) => e.stopPropagation()}
-				className="modal-content gap-5 w-4/5 md:w-1/2 lg:w-1/3">
+				className="modal-content">
 					<div className="relative pb-5">
 						<h3 className="text-4xl text-secondary font-semibold">Вход:</h3>
 						<h4 className="text-2xl text-secondary font-semibold">Заполните форму</h4>

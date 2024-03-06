@@ -74,7 +74,7 @@ function MailerModal() {
       <motion.div 
 				layout
         onClick={() => dispatch(hideMailer())}
-        className="modal-container overflow-auto">
+        className="modal-container">
         <div
           onClick={() => dispatch(hideMailer())}
           className="cursor-pointer absolute top-0 right-0 text-3xl text-primary p-2 z-50">

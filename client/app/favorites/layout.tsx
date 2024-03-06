@@ -7,9 +7,9 @@ function Layout(
 	{children, sidebar}:
 	{children: React.ReactNode, sidebar: React.ReactNode}) {
 	return ( 
-		<section className="section pt-20 pb-20 md:pb-0 bg-secondary flex flex-col items-center gap-y-10
-		before:absolute before:w-full before:-bottom-10 before:left-0 before:bg-[url('/border.png')] 
-		before:h-[120px] md:before:h-[160px] before:z-10">
+		<section className="section pt-20 pb-32 sm:pb-40 bg-secondary flex flex-col items-center gap-y-10
+		before:absolute before:w-full before:-bottom-1 before:left-0 before:bg-[url('/border.png')] 
+		before:h-[120px] md:before:h-[160px] before:bg-top before:z-10">
 			<Title title="Фавориты" subtitle='Список понравившихся моделей'/>
 			<div
 				id="catalog-container" 
