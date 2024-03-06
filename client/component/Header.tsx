@@ -25,8 +25,8 @@ function Index() {
 					className="flex items-center gap-x-5 mr-auto">
 					<Image src="/logo.png" alt="logo" width={100} height={100} />
 					<div>
-						<h1 className="text-4xl sm:text-5xl logo">{process.env.name}</h1>
-						<h2 className="text-base sm:text-xl font-logo tracking-wide text-accent/80">Premium escort service</h2>
+						<h1 className="text-3xl sm:text-5xl logo">{process.env.name}</h1>
+						<h2 className="text-sm sm:text-xl font-logo tracking-wide text-accent/80">Premium escort service</h2>
 					</div>
 				</Link>
 				<nav className="hidden lg:flex items-center gap-x-5 font-semibold text-accent text-xl font-link">
@@ -49,7 +49,7 @@ function Index() {
 					initial="hidden"
 					animate="visible"
 					exit="hidden"
-					className="absolute top-20 pt-24 overflow-hidden z-40 bg-secondary/80 w-full h-[300px]">
+					className="absolute top-20 pt-24 overflow-hidden z-40 bg-secondary/80 w-screen h-[300px]">
 					<div className="container mx-auto">
 						<nav className="pl-[2%] sm:pl-0 flex flex-col gap-y-5 h-max font-semibold text-accent text-xl font-link">
 							<Link className={`${pathname === '/' ? 'underline' : ''}`} href="/">Главная</Link>

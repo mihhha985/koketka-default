@@ -13,6 +13,8 @@
 
 	.modal-content{
 		min-width: 340px;
+		max-height: 500px;
+		overflow: auto;
 		position: relative;
 		border-radius: 20px;
 		padding: 25px;
@@ -34,12 +36,6 @@
 			bottom: -5px;
 			left: 0;
 		}
-	}
-
-	.frameBox{
-		width: 320px;
-		height: 90px;
-		margin-top: auto;
 	}
 
 }

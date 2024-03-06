@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-	@apply bg-default text-primary min-w-[380px] font-main;
+	@apply bg-default text-primary min-w-[350px] font-main;
 }
 
 .section{
@@ -39,7 +39,7 @@ body{
 }
 
 .btn{
-	@apply bg-accent text-default text-xl py-2 px-5 rounded-md font-semibold;
+	@apply bg-accent text-default text-xl py-2 px-5 rounded-md font-semibold hover:scale-105 transition-transform duration-200;
 }
 
 .error{
