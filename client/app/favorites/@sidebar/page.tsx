@@ -42,8 +42,6 @@ function Sidebar() {
   return ( 
     <div className="sidebar">
       <div 
-        onMouseMove={(e) => {showHint(e)}}
-        onMouseOut={(e) => {hideHint(e)}}
         onClick={() => dispatch(show({
           text:SideBarText.favorites.ru,
           language:'ru'
@@ -53,16 +51,12 @@ function Sidebar() {
         <p>Избранные</p>
       </div>
       <div
-        onMouseMove={(e) => {showHint(e)}}
-        onMouseOut={(e) => {hideHint(e)}} 
         onClick={getFavorites}
         className="item">
         <FaHeart />
         <p>Понравившиеся</p>
       </div>
       <div 
-        onMouseMove={(e) => {showHint(e)}}
-        onMouseOut={(e) => {hideHint(e)}}
         onClick={() => dispatch(show({
           text:SideBarText.order.ru,
           language:'ru'
@@ -72,8 +66,6 @@ function Sidebar() {
         <p>Мои заказы</p>
       </div>
       <div 
-        onMouseMove={(e) => {showHint(e)}}
-        onMouseOut={(e) => {hideHint(e)}}
         onClick={() => dispatch(show({
           text:SideBarText.message.ru,
           language:'ru'
@@ -83,20 +75,16 @@ function Sidebar() {
         <p>Мои сообщения</p>
       </div>
       <div 
-        onMouseMove={(e) => {showHint(e)}}
-        onMouseOut={(e) => {hideHint(e)}}
         onClick={() => dispatch(showProfile())}
         className="item">
         <FaUserLarge />
         <p>Профиль</p>
       </div>
       <div 
-        onMouseMove={(e) => {showHint(e)}}
-        onMouseOut={(e) => {hideHint(e)}}
         onClick={() => dispatch(showMailer())}
         className="item">
         <MdEmail />
-        <p>Остались вопросы?<br /> Напишите нам...</p>
+        <p>Остались вопросы?<br /><span>Напишите нам...</span></p>
       </div>
     </div>
   );

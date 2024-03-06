@@ -119,28 +119,30 @@ function ViewDescript({user}: {user: Contact}) {
             } 
             </p>
           </div>
+					{/*
 					<a href="https://wa.me/79897634493" target="__blank">
 						<FaWhatsapp size={32} />
 					</a>
 					<a href="https://t.me/butterfly_escort_admin" target="__blank">
 						<LiaTelegram size={32} />
 					</a>
+					*/}
         </div>
       </div>
 
       <div className="border-b border-primary pb-2">
-          <h4 className={'text-xl sm:text-2xl font-semibold'}>Параметры:</h4>
-          <div className="grid grid-cols-2 gap-2 text-xl">
-            <div className={''}>Рост: {user.description.height} см</div>
-            <div className={''}>Вес: {user.description.weight} кг</div>
-            <div className={''}>Грудь: {user.description.cupSize} размер</div>
-            <div className={''}>Цвет волос: {getHairColor(user.description.hairColor)}</div>
-            <div className={''}>Тип фигуры: {getTypeFigure(user.description.typeFigure)}</div>
-            <div className={''}>
-              <span>Размеры: </span>    
-              <span>---</span>  
-            </div>
+        <h4 className={'text-xl sm:text-2xl font-semibold'}>Параметры:</h4>
+        <div className="grid grid-cols-2 gap-2 text-xl">
+          <div className={''}>Рост: {user.description.height} см</div>
+          <div className={''}>Вес: {user.description.weight} кг</div>
+          <div className={''}>Грудь: {user.description.cupSize} размер</div>
+          <div className={''}>Цвет волос: {getHairColor(user.description.hairColor)}</div>
+          <div className={''}>Тип фигуры: {getTypeFigure(user.description.typeFigure)}</div>
+          <div className={''}>
+            <span>Размеры: </span>    
+            <span>---</span>  
           </div>
+        </div>
       </div>
 
       <div className="mt-2 sm:mt-5">
@@ -149,7 +151,7 @@ function ViewDescript({user}: {user: Contact}) {
             <p className="text-secondary-200">{user.about}</p>
           </div>
       </div>
-			<div className="flex flex-col xl:flex-row gap-2 w-full mt-20 whitespace-nowrap">
+			<div className="flex flex-col xl:flex-row gap-2 w-full mt-10 whitespace-nowrap">
         <DefaultButton
 					className="btn"
           onClick={() => {dispatch(showPayment())}} 

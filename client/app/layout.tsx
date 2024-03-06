@@ -32,8 +32,8 @@ const main = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: `${process.env.name} - ${process.env.title}`,
-  description: process.env.description,
+  title: `${process.env.name} - Эскорт услуги элитных девушек в вашем городе`,
+  description: `Сервис эскорт услуг ${process.env.name} предоставляет платный доступ к базе элитных эскортниц России`,
 };
 
 export default function RootLayout({

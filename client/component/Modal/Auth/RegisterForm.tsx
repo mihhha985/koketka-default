@@ -68,7 +68,7 @@ const RegisterForm = motion(forwardRef((props, ref:ForwardedRef<HTMLFormElement>
 					ref={ref}
 					onSubmit={handleSubmit(onSubmit)}
 					onClick={(e) => e.stopPropagation()}
-					className="modal-content gap-3 sm:gap-5 w-4/5 md:w-1/2 lg:w-1/3">
+					className="modal-content">
 					<h3 className="text-4xl font-semibold text-secondary">Регистрация:</h3>
 					<h4 className="text-2xl font-semibold text-secondary">Заполните форму</h4>
 					<div className="input-box">

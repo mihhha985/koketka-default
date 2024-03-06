@@ -11,8 +11,8 @@ const nextConfig = {
 	env:{
 		serverUrl:`${process.env.API_PROTOCOL}://${process.env.API_HOST}:${process.env.API_PORT}`,
 		name:'Butterfly',
-		title:'VIP знакомства',
-		description:'Сайт знакомств с элитными девушками и мужчинами',
+		title:'',
+		description:'',
 	}
 };
 
