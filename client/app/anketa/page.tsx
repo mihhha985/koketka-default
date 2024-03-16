@@ -9,13 +9,9 @@ function Page() {
 		setVisible(true);
 	}
 
-	return ( 
-		<>
-		<section className="section min-h-screen bg-secondary py-20
-		before:absolute before:w-full before:-bottom-10 before:left-0 before:h-[100px] sm:before:h-[140px] 
-		before:bg-[url('/border.png')] before:bg-top before:z-10">
-			<div className="container mx-auto flex flex-col items-center gap-y-10">
-			<Title title="Добавить анкету" subtitle='Заполните форму и мы свяжемся с вами'/>
+	return (
+		<> 
+		<div className="container mx-auto flex flex-col items-center gap-y-10">
 			<form
 				onSubmit={send} 
 				className="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full">
@@ -50,8 +46,7 @@ function Page() {
 					<button type="submit" className="btn w-[90%]">Отправить</button>
 				</div>
 			</form>
-			</div>
-		</section>
+		</div>
 		{visible && 
 			<div className="fixed top-0 left-0 w-screen h-screen bg-black/80 flex items-center justify-center">
 				<div className="flex flex-col p-5 bg-slate-100 rounded">

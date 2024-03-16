@@ -11,7 +11,7 @@ export default function Home() {
 		<main className="relative h-[400px] sm:h-[600px] lg:h-[800px] 
 			before:absolute before:w-full before:-bottom-1 before:left-0 before:h-[100px] sm:before:h-[180px]
 			before:bg-[url('/border.png')] before:bg-top before:z-10">
-			<Image src="/header.png" alt="эскортницы на ваш выбор" className="object-cover" sizes="100%" fill/>
+			<Image src="/header.png" alt="элитные эскортницы" className="object-cover" sizes="100%" fill/>
 		</main>
 		<Advantages />
 		<Services />

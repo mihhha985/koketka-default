@@ -23,7 +23,7 @@ function Index() {
 				<Link
 					href="/" 
 					className="flex items-center gap-x-5 mr-auto">
-					<Image src="/logo.png" alt="logo" width={100} height={100} />
+					<Image src="/logo.png" alt="butterfly" width={100} height={100} />
 					<div>
 						<h1 className="text-3xl sm:text-5xl logo">{process.env.name}</h1>
 						<h2 className="text-sm sm:text-xl font-logo tracking-wide text-accent/80">Premium escort service</h2>
