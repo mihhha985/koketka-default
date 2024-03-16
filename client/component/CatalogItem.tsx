@@ -2,6 +2,7 @@
 import Image from "next/image";
 import RatingStars from "./RatingStar";
 import {motion} from "framer-motion";
+import { forwardRef, ForwardedRef} from "react";
 
 type ItemProps = {id: number, name: string, age: number, rating: number, offset?:string};
 
@@ -10,15 +11,9 @@ const variants = {
   visible: { opacity: 1 },
 };
 
-function Index({id, name, age, rating}: ItemProps) {
+const Index = motion(forwardRef(({id, name, age, rating}: ItemProps, ref:ForwardedRef<HTMLDivElement>) => {
 	return ( 
-		<motion.div
-			initial={{ opacity: 0}}
-			whileInView={{ opacity: 1}}
-			whileTap={{ scale: 0.8}}
-			viewport={{once:true}}
-			transition={{duration:0.4, ease:"linear"}}
-			className="relative cursor-pointer overflow-hidden rounded-lg shadow-xl shadow-black/10 h-[400px]
+		<div ref={ref} className="relative cursor-pointer overflow-hidden rounded-lg shadow-xl shadow-black/10 h-[400px]
 			group hover:shadow-none transition-all duration-200 ease-in-out">
 				<Image 
 					src={`${process.env.serverUrl}/${id}/ava.jpg`}
@@ -37,8 +32,8 @@ function Index({id, name, age, rating}: ItemProps) {
           	<RatingStars rating={rating} />
         	</div>
 				</div>
-		</motion.div>
+		</div>
 	);
-}
+}))
 
 export default Index;

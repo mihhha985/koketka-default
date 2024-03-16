@@ -13,7 +13,7 @@ function Services() {
 				<Title title="Наши услуги" subtitle="Как пользоваться данным сервисом" />
 				<div className="flex flex-col md:flex-row gap-10 mt-24">
 					<div className="w-full flex items-center justify-center">
-						<Image src="/main1.png" alt="logo" width={800} height={600}/>
+						<Image src="/main1.png" alt="девушки эскорт" width={800} height={600}/>
 					</div>
 					<div className="flex items-center w-full">
 						<p className="text-xl lg:text-2xl"><span className='text-accent text-5xl'>Н</span>а самом деле всё очень просто, Вам нужно открыть Каталог, 
@@ -29,12 +29,12 @@ function Services() {
 						что сильно снизит её рейтинг.</p>
 					</div>
 					<div className="w-full flex items-center justify-center">
-						<Image src="/main2.png" alt="logo" width={800} height={600}/>
+						<Image src="/main2.png" alt="эскорт услуги" width={800} height={600}/>
 					</div>
 				</div>
 				<div className="flex flex-col md:flex-row gap-10 mt-20">
 					<div className="w-full flex items-center justify-center">
-						<Image src="/main.png" alt="logo" width={800} height={600}/>
+						<Image src="/main.png" alt="быстрые знакомства для секса" width={800} height={600}/>
 					</div>
 					<div className="w-full flex items-center justify-center">
 						<p className="text-xl lg:text-2xl">
