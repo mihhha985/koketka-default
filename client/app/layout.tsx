@@ -34,7 +34,7 @@ const main = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: `${process.env.name} - Эскорт услуги элитных эскортниц в вашем городе`,
   description: `Сервис эскорт услуг ${process.env.name} предоставляет платный доступ к базе элитных эскортниц России`,
-	
+
 	icons:{
 		icon: "/favicon.png",
 	}
@@ -51,6 +51,7 @@ export default function RootLayout({
 			<head>
 				<meta name="yandex-verification" content="d6e4ddc9be1edee6" />
 			</head>
+
       <body className={`${main.variable} ${link.variable} ${logo.variable}`}>
 				<Script id="metrika-counter" strategy="afterInteractive">
         {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
