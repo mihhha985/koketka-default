@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+Disallow: /favorites
+Disallow: ?*
+Disallow: .html
+Disallow: .php
+
+Sitemap: https://butterfly-escort.ru/sitemap.xml

@@ -60,7 +60,7 @@ export default () => {
 					<SwiperSlide key={model.id} className='relative'>
 						<Image 
 							src={`${process.env.serverUrl}/${model.description.id}/ava.jpg`}
-							alt={model.firstName}
+							alt={`Эскортница ${model.firstName}`}
 							width={300}
 							height={300}
 						/>
