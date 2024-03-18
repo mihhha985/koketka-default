@@ -25,7 +25,10 @@ function Index() {
 					className="flex items-center gap-x-5 mr-auto">
 					<Image src="/logo.png" alt="butterfly" width={100} height={100} />
 					<div>
-						<h1 className="text-3xl sm:text-5xl logo">{process.env.name}</h1>
+						<h1 className="text-3xl sm:text-5xl logo">
+							<span>{process.env.name}</span>
+							<em className=" absolute top-0 left-0 -z-50 bg-opacity-0"> - Бабочки РФ</em>
+						</h1>
 						<h2 className="text-sm sm:text-xl font-logo tracking-wide text-accent/80">Premium escort service</h2>
 					</div>
 				</Link>
