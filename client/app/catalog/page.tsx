@@ -15,6 +15,7 @@ function CatalogList() {
   const isInView = useInView(ref);
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
 		return () => {
 			page = 1;
 		}
