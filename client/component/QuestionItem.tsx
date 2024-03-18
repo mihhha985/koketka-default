@@ -31,7 +31,7 @@ function QuestionItem({title, text}: QuestionItemProps) {
     <motion.div 
 			className="flex flex-col justify-start overflow-hidden">
       <div className="flex justify-between items-start px-2">
-        <h4 className="text-2xl sm:text-3xl font-semibold">{title}</h4>
+        <h4 className="text-2xl md:text-3xl font-semibold">{title}</h4>
         <motion.div
 					initial="hidden"
 					animate={isHidden ? "hidden" : "visible"}

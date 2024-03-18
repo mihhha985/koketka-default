@@ -1,7 +1,6 @@
 "use client"
 import {useState, useEffect} from "react";
-import { FaRegHeart, FaHeart, FaWhatsapp, FaTelegram } from "react-icons/fa6";
-import { LiaTelegram } from "react-icons/lia";
+import { FaRegHeart, FaHeart } from "react-icons/fa6";
 import {TypeHair, TypeFigures } from "@/config/params";
 import translate from "@/config/translate-view";
 import { useAppDispatch } from "@/store/hooks";

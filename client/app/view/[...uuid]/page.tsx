@@ -47,7 +47,7 @@ async function View({ params }: { params: { uuid: string } }) {
 					<Title title={user.firstName} subtitle='Эскорт модель'/>
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full">
 						<ViewGallery id={user.description.id}/>
-					 <ViewDescription user={user}/>
+					 	<ViewDescription user={user}/>
 					</div>
 				</div>
 				<PaymentModal name={user.firstName} age={user.description.age}/>
