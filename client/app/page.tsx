@@ -16,10 +16,10 @@ export default function Home() {
 		<Advantages />
 		<Services />
 		<MainSlider />
-		<section className="relative mt-24">
+		<section className="section mt-24">
 			<div className="container mx-auto flex flex-col items-center gap-y-10">
 				<Title title="FAQ" subtitle="Часто задаваемые вопросы" />
-				<div className="pl-[15%] sm:pl-[25%] flex flex-col gap-y-5">
+				<div className="pl-0 sm:pl-[15%] lg:pl-[25%] flex flex-col gap-y-5">
           <QuestionItem 
             title="Если я оплатил, а девушка не отвечает?"
             text="В таком случаи вы пишите ей через наш сервис, 

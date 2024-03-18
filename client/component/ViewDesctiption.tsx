@@ -86,7 +86,7 @@ function ViewDescript({user}: {user: Contact}) {
     <div className="flex flex-col">
       <div className="text-primary border-b border-primary pb-2 relative">
         <div className="text-2xl sm:text-4xl font-semibold">Имя: {user.firstName}</div>
-        <div className="text-xl sm:text-2xl italic">Возраст: {user.description.age} - ID: {user.description.id} лет</div>
+        <div className="text-xl sm:text-2xl italic">Возраст: {user.description.age} лет</div>
         <div className="absolute top-5 right-4 cursor-pointer flex gap-5">
           <div 
             onMouseMove={(e) => {showHint(e)}}
